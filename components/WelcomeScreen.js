@@ -1,7 +1,9 @@
 import { setStatusBarBackgroundColor } from "expo-status-bar";
-import { Text, View, ScrollView, StyleSheet } from "react-native";
+import { Text, View, ScrollView, StyleSheet, TextInput } from "react-native";
+import { useState } from "react";
 
 export default function WellcomeScreen() {
+    const [firstName, onChangeFirstName] = useState('');
     return(
         // <View >
         <ScrollView
@@ -13,18 +15,14 @@ export default function WellcomeScreen() {
                 </Text>
                 <Text style={welcomeStyles.innerText}>
                     Little Lemon is a charming neighborhood bistro that serves simple food 
-                    and classic cocktails in a lively but casual environment. 
-                    We would love to hear more about your experience with us!
-                    Little Lemon is a charming neighborhood bistro that serves simple food 
                     and classic cocktails in a lively but casual environment.
-                    We would love to hear more about your experience with us!
-                    Little Lemon is a charming neighborhood bistro that serves simple food 
-                    and classic cocktails in a lively but casual environment.
-                    We would love to hear more about your experience with us!
-                    Little Lemon is a charming neighborhood bistro that serves simple food 
-                    and classic cocktails in a lively but casual environment. 
-                    We would love to hear more about your experience with us!
                 </Text>
+                <TextInput
+                style={welcomeStyles.inputText}
+                value={firstName}
+                onChangeText={onChangeFirstName}
+                placeholder="First name"
+                />
         </ScrollView>
         // </View>
     );
@@ -46,5 +44,13 @@ const welcomeStyles= StyleSheet.create({
         textAlign:'center', 
         color:'#EDEFEE', 
         paddingVertical:30
+    },
+    inputText: {
+        backgroundColor:'#EDEFEE',
+        padding: 10,
+        borderRadius: 20,
+        fontSize: 20,
+        borderWidth:3,
+        borderColor: '#EE9972',
     },
 })

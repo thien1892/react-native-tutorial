@@ -5,27 +5,29 @@ import Footer from './components/LittleLemonFooter';
 import WellcomeScreen from './components/WelcomeScreen';
 import MenuItems from './components/MenuItems';
 import MenuItemSections from './components/Section';
+import FeedbackForm from './components/FeedbackForm';
 
 export default function App() {
   return (
     <>
-    <View>
+    <View style={styles.container}>
       {/* <Text>Hello Thien!</Text> */}
       {/* <StatusBar style="auto" /> */}
       <LittleLemonHeader/>
       {/* <WellcomeScreen/> */}
+      <FeedbackForm/>
       {/* <MenuItems/> */}
       {/* <MenuItemSections/> */}
       {/* <Footer/> */}
     </View>
 
-    <View style={styles.container}>
+    {/* <View style={styles.container}>
       <MenuItemSections/>
-    </View>
+    </View> */}
 
-    {/* <View style={{flex:1, backgroundColor:'gray'}}> */}
-      {/* <WellcomeScreen/> */}
-    {/* </View> */}
+    {/* <View style={{flex:1, backgroundColor:'gray'}}>
+      <WellcomeScreen/>
+    </View> */}
 
     <View>
       <Footer/>
