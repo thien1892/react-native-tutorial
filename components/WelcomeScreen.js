@@ -4,6 +4,9 @@ import { useState } from "react";
 
 export default function WellcomeScreen() {
     const [firstName, onChangeFirstName] = useState('');
+    const [lastName, onChangeLastName] = useState('');
+    const [email, onChangeEmail] = useState('');
+
     return(
         // <View >
         <ScrollView
@@ -21,6 +24,18 @@ export default function WellcomeScreen() {
                 style={welcomeStyles.inputText}
                 value={firstName}
                 onChangeText={onChangeFirstName}
+                placeholder="First name"
+                />
+                <TextInput
+                style={welcomeStyles.inputText}
+                value={lastName}
+                onChangeText={onChangeLastName}
+                placeholder="First name"
+                />
+                <TextInput
+                style={welcomeStyles.inputText}
+                value={email}
+                onChangeText={onChangeEmail}
                 placeholder="First name"
                 />
         </ScrollView>
@@ -52,5 +67,6 @@ const welcomeStyles= StyleSheet.create({
         fontSize: 20,
         borderWidth:3,
         borderColor: '#EE9972',
+        marginVertical: 10,
     },
 })

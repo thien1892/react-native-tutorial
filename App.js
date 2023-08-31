@@ -29,9 +29,10 @@ export default function App() {
       <WellcomeScreen/>
     </View> */}
 
-    <View>
+    {/* <View>
       <Footer/>
-    </View>
+    </View> */}
+
     </>
   );
 }
