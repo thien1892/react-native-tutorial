@@ -6,6 +6,8 @@ import WellcomeScreen from './components/WelcomeScreen';
 import MenuItems from './components/MenuItems';
 import MenuItemSections from './components/Section';
 import FeedbackForm from './components/FeedbackForm';
+import LoginScreen from './components/LoginScreen';
+import LoginScreenPress from './components/Pressable-component';
 
 export default function App() {
   return (
@@ -15,10 +17,12 @@ export default function App() {
       {/* <StatusBar style="auto" /> */}
       <LittleLemonHeader/>
       {/* <WellcomeScreen/> */}
-      <FeedbackForm/>
+      {/* <FeedbackForm/> */}
       {/* <MenuItems/> */}
       {/* <MenuItemSections/> */}
       {/* <Footer/> */}
+      {/* <LoginScreen/> */}
+      <LoginScreenPress/>
     </View>
 
     {/* <View style={styles.container}>
