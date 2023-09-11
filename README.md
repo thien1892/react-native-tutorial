@@ -8,9 +8,9 @@ npx expo start --tunnel # may be npm install @expo/ngrok@^4.1.0
 ```
 # 2. Core Component
 ## Pressable Component
-1. Reading:
+### 1. Reading:
 - [Exploring Pressable](https://www.coursera.org/learn/react-native-course/supplement/qYDM2/exploring-pressable)
-2. Code sample
+### 2. Code sample
 - [Pressable-component](https://github.com/thien1892/react-native-tutorial/blob/main/components/Pressable-component.js)
 ```javascript
 <Pressable 
@@ -25,12 +25,12 @@ npx expo start --tunnel # may be npm install @expo/ngrok@^4.1.0
 ```
 
 ## Image Component
-1. Reading: 
+### 1. Reading: 
 - [Exploring props to the Image Component - Coursera](https://www.coursera.org/learn/react-native-course/supplement/z3oVl/exploring-props-to-the-image-component)
 - [Image · React Native](https://reactnative.dev/docs/image)
 - [ImageBackground · React Native](https://reactnative.dev/docs/imagebackground)
 - [Image Style Props · React Native](https://reactnative.dev/docs/image-style-props)
-2. Code example:
+### 2. Code example:
 ```javascript
 <Image
     style={styles.logo}
