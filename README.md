@@ -92,12 +92,12 @@ export default Welcome;
 ```
 
 ## 3.3. Other community hooks
-### 1. Install
+### 3.3.1. Install
 ```bash
 npm install @react-native-community/hooks
 ```
 
-### 2. useDeviceOrientationHook
+### 3.3.2. useDeviceOrientationHook
 - This hook can determine if the user’s mobile device is viewed in landscape or portrait mode. You can utilize this hook to determine the orientation if your app needs to support both modes.
 ```javascript
 import { useDeviceOrientation } from '@react-native-community/hooks' 
@@ -108,7 +108,7 @@ console.log('is orientation portrait: ', orientation.portrait)
 console.log('is orientation landscape: ', orientation.landscape) 
 ```
 
-### 3. useAppStateHook
+### 3.3.3. useAppStateHook
 - The useAppState hook is quite useful. This hook is used to determine the current app state. It can be active, background or inactive (iOS only). This determines when the user puts the app in a closed, background, inactive or active state.
 - This information is helpful to the developer to take specific necessary actions within the app, depending on whether the app is actively running or in the background. For example, specific applications like banking applications may log out the user after a particular time of inactivity or when the app is in the background.
 ```javascript
@@ -122,3 +122,8 @@ const [data, setString] = useClipboard()
 
 <Button title='Update Clipboard' onPress={() => setString('new clipboard data')}>Set Clipboard</Button> 
 ```
+### 3.3.4. Reading:
+- [GitHub - react-native-community/hooks: React Native APIs turned into React Hooks for use in functional React components](https://github.com/react-native-community/hooks)
+- [useColorScheme · React Native](https://reactnative.dev/docs/usecolorscheme)
+- [useWindowDimensions · React Native](https://reactnative.dev/docs/usewindowdimensions)
+- [Introducing Hooks – React (reactjs.org)](https://reactjs.org/docs/hooks-intro.html)

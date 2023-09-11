@@ -9,6 +9,7 @@ import FeedbackForm from './components/FeedbackForm';
 import LoginScreen from './components/LoginScreen';
 import LoginScreenPress from './components/Pressable-component';
 import WelcomeScreenImageComponent from './components/ImageComponent';
+import WelcomeScreenUseHook from './components/WelcomUseHook';
 
 export default function App() {
   return (
@@ -24,7 +25,7 @@ export default function App() {
       {/* <Footer/> */}
       {/* <LoginScreen/> */}
       {/* <LoginScreenPress/> */}
-      <WelcomeScreenImageComponent/>
+      <WelcomeScreenUseHook/>
     </View>
 
     {/* <View style={styles.container}>
@@ -35,9 +36,9 @@ export default function App() {
       <WellcomeScreen/>
     </View> */}
 
-    {/* <View>
+    <View>
       <Footer/>
-    </View> */}
+    </View>
 
     </>
   );
