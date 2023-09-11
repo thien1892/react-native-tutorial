@@ -8,6 +8,7 @@ import MenuItemSections from './components/Section';
 import FeedbackForm from './components/FeedbackForm';
 import LoginScreen from './components/LoginScreen';
 import LoginScreenPress from './components/Pressable-component';
+import WelcomeScreenImageComponent from './components/ImageComponent';
 
 export default function App() {
   return (
@@ -22,7 +23,8 @@ export default function App() {
       {/* <MenuItemSections/> */}
       {/* <Footer/> */}
       {/* <LoginScreen/> */}
-      <LoginScreenPress/>
+      {/* <LoginScreenPress/> */}
+      <WelcomeScreenImageComponent/>
     </View>
 
     {/* <View style={styles.container}>

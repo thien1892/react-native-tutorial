@@ -11,9 +11,8 @@ export default function LoginScreenPress() {
       <Text style={styles.headerText}>Welcome to Little Lemon</Text>
       {logIn ? <Text style={styles.regularText}>You are logged in!</Text>: null}
       {!logIn && (
+        <>
         <Text style={styles.regularText}>Login to continue </Text>
-      )}
-      {!logIn && (
         <TextInput
         style={styles.inputBox}
         value={email}
@@ -21,8 +20,6 @@ export default function LoginScreenPress() {
         placeholder={'email'}
         keyboardType={'email-address'}
       />
-      ) }
-      {! logIn && (
         <TextInput
         style={styles.inputBox}
         value={password}
@@ -31,6 +28,7 @@ export default function LoginScreenPress() {
         keyboardType={'default'}
         secureTextEntry={true}
       />
+      </>
       )}
       <Pressable
         onPress={() => setLogIn(!logIn)}
