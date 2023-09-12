@@ -127,3 +127,75 @@ const [data, setString] = useClipboard()
 - [useColorScheme · React Native](https://reactnative.dev/docs/usecolorscheme)
 - [useWindowDimensions · React Native](https://reactnative.dev/docs/usewindowdimensions)
 - [Introducing Hooks – React (reactjs.org)](https://reactjs.org/docs/hooks-intro.html)
+
+# 4. React Navigation
+
+## 4.1. Installation and Setup of React Navigation
+
+### 4.1.1. Installation into an Expo-managed project
+```
+npm install @react-navigation/native
+
+npx expo install react-native-screens react-native-safe-area-context
+```
+### 4.1.2. Using NavigationContainer
+```javascript
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+
+export default function App() {
+  return (
+    <NavigationContainer>{/* Rest of your app code */}</NavigationContainer>
+  );
+}
+```
+### 4.1.3. Creating and Configuring Native Stack Navigator
+```
+npm install @react-navigation/native-stack
+```
+- Create Native Stack Navigator
+```javascript
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import MenuScreen from "./Screens/MenuScreen";
+import WelcomeScreen from "./Screens/WelcomeScreen";
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Welcome">
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="Menu" component={MenuScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
+```
+
+## 4.2. Passing props to Screen
+### 4.2.1. Screen Options
+- Within your stack navigator, if you want to specify the same options for all the screens, then you can utilize the screenOptions prop that can be passed to the Navigator.
+``` javascript
+<Stack.Navigator
+        initialRouteName="Welcome"
+        screenOptions={{ headerStyle: { backgroundColor: '#FBDABB' } }}>
+        {/* Rest of the code ... */}
+```
+
+### 4.2.2. Options
+- If you want to pass specific props per screen, you can then pass them through the options prop within the Stack Screen as shown below:
+```javascript
+<Stack.Screen
+   name="Welcome"
+   component={WelcomeScreen}
+   options={{ title: 'Home' }}
+ />
+```
+- In the previous example, the title for the Welcome screen has been provided as Home. This is specific to the Welcome screen and will have nothing to do with the other screens.
