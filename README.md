@@ -226,3 +226,7 @@ const WelcomeScreen = ({ navigation }) => {
 - [Getting started | React Navigation](https://reactnavigation.org/docs/getting-started)
 - [Hello React Navigation | React Navigation](https://reactnavigation.org/docs/hello-react-navigation)
 - [Troubleshooting | React Navigation](https://reactnavigation.org/docs/troubleshooting)
+
+- [Moving between screens | React Navigation](https://reactnavigation.org/docs/navigating)
+- [Passing parameters to routes | React Navigation](https://reactnavigation.org/docs/params)
+- [Configuring the header bar | React Navigation](https://reactnavigation.org/docs/headers)

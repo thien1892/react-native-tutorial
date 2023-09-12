@@ -7,7 +7,7 @@ import {
   Pressable,
 } from 'react-native';
 
-export default function LoginScreenRoutes() {
+export default function LoginScreenRoutes({navigation}) {
   const [email, onChangeEmail] = useState('');
   const [password, onChangePassword] = useState('');
 
@@ -30,9 +30,13 @@ export default function LoginScreenRoutes() {
         keyboardType={'default'}
         secureTextEntry={true}
       />
-      <Pressable onPress={() => {}} style={styles.button}>
+      <Pressable onPress={() => navigation.navigate('Welcome')} style={styles.button}>
         <Text style={styles.buttonText}>Log in</Text>
       </Pressable>
+{/* 
+      <Pressable onPress={() => navigation.navigate('Welcome')} style={styles.button} >
+        <Text style={styles.buttonText} >Welcome Page</Text>
+      </Pressable> */}
     </ScrollView>
   );
 }
