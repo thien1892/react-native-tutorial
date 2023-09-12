@@ -6,6 +6,20 @@ cd AwesomeProject
 npx expo start --tunnel # may be npm install @expo/ngrok@^4.1.0
 # install EXPO app in google play
 ```
+
+**Orther Library**
+```bash
+# Other community hooks: useDeviceOrientation, useClipboard,...
+# https://github.com/react-native-community/hooks
+npm install @react-native-community/hooks
+# Installation and Setup of React Navigation
+npm install @react-navigation/native
+npx expo install react-native-screens react-native-safe-area-context
+# Native Stack Navigator
+npm install @react-navigation/native-stack
+# Tab Navigation
+npm install @react-navigation/bottom-tabs
+```
 # 2. Core Component
 ## Pressable Component
 ### 1. Reading:
