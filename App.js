@@ -10,37 +10,34 @@ import LoginScreen from './components/LoginScreen';
 import LoginScreenPress from './components/Pressable-component';
 import WelcomeScreenImageComponent from './components/ImageComponent';
 import WelcomeScreenUseHook from './components/WelcomUseHook';
+import LoginScreenRoutes from './components/set-up-routes/Login';
+import WelcomeScreenRoutes from './components/set-up-routes/Welcome';
+
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <>
+  <NavigationContainer>
     <View style={styles.container}>
-      {/* <Text>Hello Thien!</Text> */}
-      {/* <StatusBar style="auto" /> */}
       <LittleLemonHeader/>
-      {/* <WellcomeScreen/> */}
-      {/* <FeedbackForm/> */}
-      {/* <MenuItems/> */}
-      {/* <MenuItemSections/> */}
-      {/* <Footer/> */}
-      {/* <LoginScreen/> */}
-      {/* <LoginScreenPress/> */}
-      <WelcomeScreenUseHook/>
+      <Stack.Navigator 
+        initialRouteName="Login"
+        screenOptions={{ headerStyle: { backgroundColor: '#FBDABB' } }}
+        >
+        <Stack.Screen name="Welcome" component={WelcomeScreenRoutes} options={{ title: 'Home' }} />
+        <Stack.Screen name="Login" component={LoginScreenRoutes} />
+      </Stack.Navigator>
     </View>
-
-    {/* <View style={styles.container}>
-      <MenuItemSections/>
-    </View> */}
-
-    {/* <View style={{flex:1, backgroundColor:'gray'}}>
-      <WellcomeScreen/>
-    </View> */}
 
     <View>
       <Footer/>
     </View>
 
-    </>
+  </NavigationContainer>
   );
 }
 

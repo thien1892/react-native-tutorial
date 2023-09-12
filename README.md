@@ -155,7 +155,6 @@ npm install @react-navigation/native-stack
 ```
 - Create Native Stack Navigator
 ```javascript
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -199,3 +198,8 @@ export default App;
  />
 ```
 - In the previous example, the title for the Welcome screen has been provided as Home. This is specific to the Welcome screen and will have nothing to do with the other screens.
+
+## 4.3. Reading
+- [Getting started | React Navigation](https://reactnavigation.org/docs/getting-started)
+- [Hello React Navigation | React Navigation](https://reactnavigation.org/docs/hello-react-navigation)
+- [Troubleshooting | React Navigation](https://reactnavigation.org/docs/troubleshooting)
