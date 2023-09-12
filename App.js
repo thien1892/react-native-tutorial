@@ -1,45 +1,52 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import LittleLemonHeader from './components/LittleLemonHeader';
 import Footer from './components/LittleLemonFooter';
-import WellcomeScreen from './components/WelcomeScreen';
-import MenuItems from './components/MenuItems';
-import MenuItemSections from './components/Section';
-import FeedbackForm from './components/FeedbackForm';
-import LoginScreen from './components/LoginScreen';
-import LoginScreenPress from './components/Pressable-component';
-import WelcomeScreenImageComponent from './components/ImageComponent';
-import WelcomeScreenUseHook from './components/WelcomUseHook';
-import LoginScreenRoutes from './components/set-up-routes/Login';
-import WelcomeScreenRoutes from './components/set-up-routes/Welcome';
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import LoginScreen from './components/tab-navigation/LoginScreen';
+import WelcomeScreen from './components/tab-navigation/Welcome';
 
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
   <NavigationContainer>
     <View style={styles.container}>
       <LittleLemonHeader/>
-      <Stack.Navigator 
-        initialRouteName="Login"
-        screenOptions={{ 
-          headerStyle: { backgroundColor: '#fff' },
-          headerTitleStyle: { fontWeight: 'bold'},
-          // headerTintColor: '#333333',
+      <Tab.Navigator 
+        screenOptions={({route}) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+  
+            if (route.name === 'Welcome') {
+              iconName = focused
+                ? 'home'
+                : 'home-outline';
+            } else if (route.name === 'Login') {
+              iconName =  'log-in';
+            }
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+          tabBarActiveTintColor: 'tomato',
+          tabBarInactiveTintColor: 'gray',
+          headerTintColor: 'red',
           headerTitleAlign: 'center',
-        }}
+          headerTitleStyle: {fontWeight: 'bold'},
+          tabBarStyle: {backgroundColor: '#EDEFEE',},
+        })}
         >
-        <Stack.Screen name="Welcome" component={WelcomeScreenRoutes} options={{ title: 'Home' }} />
-        <Stack.Screen name="Login" component={LoginScreenRoutes} />
-      </Stack.Navigator>
+        <Tab.Screen name="Welcome" component={WelcomeScreen} options={{ title: 'Home' }} />
+        <Tab.Screen name="Login" component={LoginScreen} />
+      </Tab.Navigator>
+      
     </View>
 
-    <View>
-      <Footer/>
+    <View style={styles.footerContainer}>
+          <Footer />
     </View>
 
   </NavigationContainer>
@@ -51,5 +58,6 @@ const styles = StyleSheet.create({
     flex:1, 
     backgroundColor:'#333333',
     // backgroundColor:'black',
-  }
+  },
+  footerContainer: { backgroundColor: '#333333' },
 })

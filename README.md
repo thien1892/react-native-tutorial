@@ -295,7 +295,7 @@ export default function App() {
 }
 ```
 
-## 4.4. Reading
+## 4.5. Reading
 - [Getting started | React Navigation](https://reactnavigation.org/docs/getting-started)
 - [Hello React Navigation | React Navigation](https://reactnavigation.org/docs/hello-react-navigation)
 - [Troubleshooting | React Navigation](https://reactnavigation.org/docs/troubleshooting)
@@ -303,3 +303,8 @@ export default function App() {
 - [Moving between screens | React Navigation](https://reactnavigation.org/docs/navigating)
 - [Passing parameters to routes | React Navigation](https://reactnavigation.org/docs/params)
 - [Configuring the header bar | React Navigation](https://reactnavigation.org/docs/headers)
+
+- [Tab navigation | React Navigation](https://reactnavigation.org/docs/tab-based-navigation)
+- [Bottom Tabs Navigator | React Navigation](https://reactnavigation.org/docs/bottom-tab-navigator)
+- [Material Bottom Tabs Navigator | React Navigation](https://reactnavigation.org/docs/material-bottom-tab-navigator)
+- [Material Top Tabs Navigator | React Navigation](https://reactnavigation.org/docs/material-top-tab-navigator/)
