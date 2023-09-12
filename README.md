@@ -199,7 +199,30 @@ export default App;
 ```
 - In the previous example, the title for the Welcome screen has been provided as Home. This is specific to the Welcome screen and will have nothing to do with the other screens.
 
-## 4.3. Reading
+## 4.3. Navigating to a Screen
+```javascript
+import * as React from 'react'; 
+import { Text, View, Image, StyleSheet, Pressable } from 'react-native'; 
+
+const WelcomeScreen = ({ navigation }) => { 
+  return ( 
+    <View style={styles.container}> 
+      <Image 
+        style={styles.logo} 
+        source={require('../img/LittleLemonLogo.png')} 
+      /> 
+      <Text style={styles.title}> 
+        Little Lemon, your local Mediterranean Bistro 
+      </Text> 
+      <Pressable onPress={() => navigation.navigate('Menu')}> 
+        <Text style={styles.buttonText}>View Menu</Text> 
+      </Pressable> 
+    </View> 
+  ); 
+};
+```
+
+## 4.4. Reading
 - [Getting started | React Navigation](https://reactnavigation.org/docs/getting-started)
 - [Hello React Navigation | React Navigation](https://reactnavigation.org/docs/hello-react-navigation)
 - [Troubleshooting | React Navigation](https://reactnavigation.org/docs/troubleshooting)
