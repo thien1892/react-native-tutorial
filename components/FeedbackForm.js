@@ -31,16 +31,19 @@ const FeedbackForm = () => {
           style={styles.input}
           value={firstName}
           onChangeText={onChangeFirstName}
+          placeholder='first name'
         />
         <TextInput
           style={styles.input}
           value={lastName}
           onChangeText={onChangeLastName}
+          placeholder='last name'
         />
         <TextInput
           style={styles.messageInput}
           value={message}
           onChangeText={onChangeMessage}
+          placeholder='message'
         />
       </ScrollView>
     </KeyboardAvoidingView>
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     fontSize: 16,
-    borderColor: 'EDEFEE',
+    borderColor: '#EDEFEE',
     backgroundColor: '#F4CE14',
   },
   messageInput: {

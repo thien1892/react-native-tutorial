@@ -304,6 +304,24 @@ export default function App() {
 npm install @react-navigation/drawer
 npx expo install react-native-gesture-handler react-native-reanimated
 ```
+- Fix babel error in drawer navigation
+```javascript
+module.exports = function(api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+    plugins: [
+      [
+        "module-resolver",
+        {
+          extensions: [".tsx", ".ts", ".js", ".json"],
+        },
+      ],
+      "react-native-reanimated/plugin",
+    ],
+  };
+};
+```
 - Code
 ```javascript
 import { NavigationContainer } from '@react-navigation/native';
@@ -331,8 +349,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-	    useLegacyImplementation
-        screenOptions={{ drawerPosition: “right” }}>
+	      useLegacyImplementation
+        screenOptions={{ drawerPosition: “right” }}
+        initialRouteName="Login">
         <Drawer.Screen name="Welcome" component={WelcomeScreen} />
         <Drawer.Screen name="Menu" component={MenuScreen} />
       </Drawer.Navigator>
