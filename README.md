@@ -19,6 +19,9 @@ npx expo install react-native-screens react-native-safe-area-context
 npm install @react-navigation/native-stack
 # Tab Navigation
 npm install @react-navigation/bottom-tabs
+# Drawer Navigation
+npm install @react-navigation/drawer
+npx expo install react-native-gesture-handler react-native-reanimated
 ```
 # 2. Core Component
 ## Pressable Component
@@ -295,7 +298,49 @@ export default function App() {
 }
 ```
 
-## 4.5. Reading
+## 4.5. Drawer Navigation
+- Installation
+```bash
+npm install @react-navigation/drawer
+npx expo install react-native-gesture-handler react-native-reanimated
+```
+- Code
+```javascript
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import MenuScreen from './Screens/MenuScreen';
+import WelcomeScreen from './Screens/WelcomeScreen';
+
+const Drawer = createDrawerNavigator ();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator>
+        <Drawer.Screen name="Welcome" component={WelcomeScreen} />
+        <Drawer.Screen name="Menu" component={MenuScreen} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
+}
+```
+
+- Customize
+```javascript
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator
+	    useLegacyImplementation
+        screenOptions={{ drawerPosition: “right” }}>
+        <Drawer.Screen name="Welcome" component={WelcomeScreen} />
+        <Drawer.Screen name="Menu" component={MenuScreen} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
+}
+```
+## 4.6. Reading
 **Intro Navigation**
 - [Getting started | React Navigation](https://reactnavigation.org/docs/getting-started)
 - [Hello React Navigation | React Navigation](https://reactnavigation.org/docs/hello-react-navigation)
