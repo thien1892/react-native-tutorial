@@ -300,10 +300,12 @@ export default function App() {
 - [Getting started | React Navigation](https://reactnavigation.org/docs/getting-started)
 - [Hello React Navigation | React Navigation](https://reactnavigation.org/docs/hello-react-navigation)
 - [Troubleshooting | React Navigation](https://reactnavigation.org/docs/troubleshooting)
+
 **React Navigation**
 - [Moving between screens | React Navigation](https://reactnavigation.org/docs/navigating)
 - [Passing parameters to routes | React Navigation](https://reactnavigation.org/docs/params)
 - [Configuring the header bar | React Navigation](https://reactnavigation.org/docs/headers)
+
 **Tab Navigation**
 - [Tab navigation | React Navigation](https://reactnavigation.org/docs/tab-based-navigation)
 - [Bottom Tabs Navigator | React Navigation](https://reactnavigation.org/docs/bottom-tab-navigator)
