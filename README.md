@@ -349,8 +349,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-	      useLegacyImplementation
-        screenOptions={{ drawerPosition: “right” }}
+	      // useLegacyImplementation
+        screenOptions={{ drawerPosition: 'right' }}
         initialRouteName="Login">
         <Drawer.Screen name="Welcome" component={WelcomeScreen} />
         <Drawer.Screen name="Menu" component={MenuScreen} />
@@ -375,3 +375,8 @@ export default function App() {
 - [Bottom Tabs Navigator | React Navigation](https://reactnavigation.org/docs/bottom-tab-navigator)
 - [Material Bottom Tabs Navigator | React Navigation](https://reactnavigation.org/docs/material-bottom-tab-navigator)
 - [Material Top Tabs Navigator | React Navigation](https://reactnavigation.org/docs/material-top-tab-navigator/)
+
+**Drawer navigation**
+- [Drawer navigation | React Navigation](https://reactnavigation.org/docs/drawer-based-navigation/)
+- [Drawer Navigator | React Navigation](https://reactnavigation.org/docs/drawer-navigator)
+- [Multiple drawers | React Navigation](https://reactnavigation.org/docs/multiple-drawers)
